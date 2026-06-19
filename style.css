@@ -1,0 +1,46 @@
+:root {
+    --main-clr: #131735;
+    --dark-clr: #222;
+    --big-fz: calc(25px +(45 - 25) * ((100vw - 300px) / (1500 - 300)));
+    --medium-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1500 - 300)));
+    --small-fz: calc(12px +(18 - 12) * ((100vw - 300px) / (1500 - 300)));
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.5)
+}
+
+body {
+    background-color: var(--main-clr);
+}
+
+/* heeader scetion start */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark-clr);
+    z-index: 1000;
+    padding: 2rem 8%;
+    box-shadow: var(--box-shadow);
+}
+
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+header span{
+    font-size: var(--medium-fz);
+    color: #fff
+}
+
+
+header .navbar ul {
+    display: flex;
+    gap: 2rem;
+}
