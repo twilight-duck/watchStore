@@ -3,7 +3,7 @@
     --dark-clr: #222;
     --big-fz: calc(25px +(45 - 25) * ((100vw - 300px) / (1500 - 300)));
     --medium-fz: calc(20px + (35 - 20) * ((100vw - 300px) / (1500 - 300)));
-    --small-fz: calc(12px +(18 - 12) * ((100vw - 300px) / (1500 - 300)));
+    --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / (1500 - 300)));
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,.5)
 }
 
@@ -43,4 +43,30 @@ header span{
 header .navbar ul {
     display: flex;
     gap: 2rem;
+}
+
+
+header .navbar ul li a {
+    font-size: var(--small-fz);
+    color: #fff;
+    position: relative;
+    text-transform: capitalize;
+}
+
+
+header .navbar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    width: 0%;
+    height: 0.2rem;
+    background-color: dodgerblue;
+    transition: 0.3s linear;
+}
+
+
+header .navbar ul li a:hover::before{
+    left: 0;
+    width: 100%;
 }
