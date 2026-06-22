@@ -34,6 +34,10 @@ header .logo {
     gap: 1.5rem;
 }
 
+header .logo img{
+    width: 3rem;
+}
+
 header span{
     font-size: var(--medium-fz);
     color: #fff
@@ -69,4 +73,57 @@ header .navbar ul li a::before{
 header .navbar ul li a:hover::before{
     left: 0;
     width: 100%;
+}
+
+
+header #menu{
+    font-size: var(--medium-fz);
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* heeader scetion end */
+
+
+/* media queries */
+
+
+@media (max-width: 820px) {
+  header #menu{
+    display: block;
+  }
+
+  header .navbar{
+    position: fixed;
+    left: 0;
+    top: -120%;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  header .navbar.active{
+    top: 9.2rem;
+  }
+
+  header .navbar ul{
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  header .navbar ul li{
+    width: 100%;
+    text-align: center;
+  }
+
+  header .navbar ul li a{
+    display: block;
+    background-color: var(--main-clr);
+    padding: 1rem;
+  }
+
+  header .fa-times{
+    transform: rotate(90deg);
+  }
 }

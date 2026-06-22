@@ -20,6 +20,10 @@
     <!--Header section start-->
     <header>
         <a href="" class="logo"><img src="img/logo.png" alt="logo"><span>Sports Watch</span></a>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+
         <nav class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -32,5 +36,24 @@
         </nav>
     </header>
     <!--Header section end-->
+
+    <section class="home" id="home">
+        <div class="image"></div>
+    </section>
+
+
+
+
+
+    <script>
+        let menu = document.querySelector('#menu');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-bars');
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
